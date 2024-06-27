@@ -9,12 +9,12 @@ import { DB_NAME } from './constants.js'
 import connectDB from "./database/index.js"
 
 dotenv.config({
-    path: './.env'
+    path: './env'
 })
 
 
 connectDB()
-.then( () =>{
+.then( () =>{           // promise 
 
     const port = process.env.PORT || 8000;
     app.listen(port, () =>{
